@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon">
+      <UniqueIdentifier>{4f4b67fa-7f15-45c5-a21f-eb8fce7fa76a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\S1">
+      <UniqueIdentifier>{94a133ef-90a0-469c-8076-3d65c65e23be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\S3">
+      <UniqueIdentifier>{3c71cdd1-46e3-4a22-a81e-bf7a62290bf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\S2">
+      <UniqueIdentifier>{b18d201f-e009-49da-825b-deb87b736912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\S4">
+      <UniqueIdentifier>{1768e01c-d2fa-4d87-a311-923e65d2a507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\B2">
+      <UniqueIdentifier>{1249952b-21fb-4bef-af1b-55344b3c062f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\G5">
+      <UniqueIdentifier>{4df81f85-7981-43b3-b07f-fefa5a19619a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\B1">
+      <UniqueIdentifier>{d06aeb1e-f18b-4226-b64c-3b41adba414e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\S5">
+      <UniqueIdentifier>{1230e9c4-da85-4a3a-bb19-426108be04cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\B5">
+      <UniqueIdentifier>{ba84b105-0121-44a3-b4f5-02b610b27287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\B3">
+      <UniqueIdentifier>{9d5ecd25-ba71-4e87-9a64-0a4b2dc1c3a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Algospot">
+      <UniqueIdentifier>{c6acd81e-79b1-4345-8eb9-bef8fe52dd5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers">
+      <UniqueIdentifier>{78a5b73d-4b0f-4c76-99ab-de3aec244958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers\Hash">
+      <UniqueIdentifier>{fd295a62-c069-4b15-b0b2-75b65d9a80d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers\Greedy">
+      <UniqueIdentifier>{fcd57024-d0a4-4ee5-8992-3706049dc687}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers\Stack/Queue">
+      <UniqueIdentifier>{0e15ab3d-e4fd-4f3f-ab7a-6e545b075dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers\DFS,BFS">
+      <UniqueIdentifier>{5b0dce73-8c9e-4172-9992-7cea6612a6fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers\BruteForce">
+      <UniqueIdentifier>{5e7fba78-0709-4d27-a6e5-fe7bb6978535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\G4">
+      <UniqueIdentifier>{09503362-64cc-464b-82b8-00617f3195fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers\정렬">
+      <UniqueIdentifier>{1bf38042-1f82-46e3-9652-4ea087a4d6af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers\이분탐색">
+      <UniqueIdentifier>{d7e3cfb4-b737-4eff-b397-b72b169444b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers\Heap">
+      <UniqueIdentifier>{ae79fd2c-caac-4c9a-815b-0334986a4085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers\Graph">
+      <UniqueIdentifier>{55c219b3-1422-4754-a180-926bfb108259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Kakao_Blind_2017">
+      <UniqueIdentifier>{4256fd19-7668-49dd-a9ee-b91e2d49831a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Kakao_Blind_2021">
+      <UniqueIdentifier>{91f26c7d-7591-4d06-ac05-9a68bbf3a78f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Programmers\Level 3">
+      <UniqueIdentifier>{d7d90500-39db-42b0-9b5a-b4e8e1ceb002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Naver_2021">
+      <UniqueIdentifier>{09edd2e7-65e6-413a-b4db-895321b0acd4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="1309.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
+    <ClCompile Include="1149.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
+    <ClCompile Include="1463.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="11053.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
+    <ClCompile Include="10845.cpp">
+      <Filter>소스 파일\BaekJoon\S4</Filter>
+    </ClCompile>
+    <ClCompile Include="8958.cpp">
+      <Filter>소스 파일\BaekJoon\B2</Filter>
+    </ClCompile>
+    <ClCompile Include="14502.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
+    <ClCompile Include="1182.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
+    <ClCompile Include="2178.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
+    <ClCompile Include="11724.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
+    <ClCompile Include="1357.cpp">
+      <Filter>소스 파일\BaekJoon\B1</Filter>
+    </ClCompile>
+    <ClCompile Include="1260.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
+    <ClCompile Include="1012.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
+    <ClCompile Include="1485.cpp">
+      <Filter>소스 파일\BaekJoon\S4</Filter>
+    </ClCompile>
+    <ClCompile Include="2078.cpp">
+      <Filter>소스 파일\BaekJoon\S5</Filter>
+    </ClCompile>
+    <ClCompile Include="1181.cpp">
+      <Filter>소스 파일\BaekJoon\S5</Filter>
+    </ClCompile>
+    <ClCompile Include="1920.cpp">
+      <Filter>소스 파일\BaekJoon\S4</Filter>
+    </ClCompile>
+    <ClCompile Include="5522.cpp">
+      <Filter>소스 파일\BaekJoon\B5</Filter>
+    </ClCompile>
+    <ClCompile Include="2442.cpp">
+      <Filter>소스 파일\BaekJoon\B3</Filter>
+    </ClCompile>
+    <ClCompile Include="2445.cpp">
+      <Filter>소스 파일\BaekJoon\B3</Filter>
+    </ClCompile>
+    <ClCompile Include="11403.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
+    <ClCompile Include="1929.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
+    <ClCompile Include="2606.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="9095.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="10799.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="11727.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="11399.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="2193.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="11726.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="1003.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="9461.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="1654.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="2490.cpp">
+      <Filter>소스 파일\BaekJoon\B3</Filter>
+    </ClCompile>
+    <ClCompile Include="1000.cpp">
+      <Filter>소스 파일\BaekJoon\B5</Filter>
+    </ClCompile>
+    <ClCompile Include="2579.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="2750.cpp">
+      <Filter>소스 파일\BaekJoon\S5</Filter>
+    </ClCompile>
+    <ClCompile Include="2557.cpp">
+      <Filter>소스 파일\BaekJoon\B5</Filter>
+    </ClCompile>
+    <ClCompile Include="2156%28X%29.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
+    <ClCompile Include="P239_PI.cpp">
+      <Filter>소스 파일\Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="P244_QUANTIZE%28X%29.cpp">
+      <Filter>소스 파일\Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="P252_TILING2.cpp">
+      <Filter>소스 파일\Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="42576.cpp">
+      <Filter>소스 파일\Programmers\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="42577.cpp">
+      <Filter>소스 파일\Programmers\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="42578.cpp">
+      <Filter>소스 파일\Programmers\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="42579.cpp">
+      <Filter>소스 파일\Programmers\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="42862.cpp">
+      <Filter>소스 파일\Programmers\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="42860%28X%29.cpp">
+      <Filter>소스 파일\Programmers\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="42584.cpp">
+      <Filter>소스 파일\Programmers\Stack/Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="43165.cpp">
+      <Filter>소스 파일\Programmers\DFS,BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="43162.cpp">
+      <Filter>소스 파일\Programmers\DFS,BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="9095_BruteForce.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="43163.cpp">
+      <Filter>소스 파일\Programmers\DFS,BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="1051.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="43164.cpp">
+      <Filter>소스 파일\Programmers\DFS,BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="42840.cpp">
+      <Filter>소스 파일\Programmers\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="42842.cpp">
+      <Filter>소스 파일\Programmers\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="42839.cpp">
+      <Filter>소스 파일\Programmers\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="18405.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
+    <ClCompile Include="1726.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
+    <ClCompile Include="42748.cpp">
+      <Filter>소스 파일\Programmers\정렬</Filter>
+    </ClCompile>
+    <ClCompile Include="42746.cpp">
+      <Filter>소스 파일\Programmers\정렬</Filter>
+    </ClCompile>
+    <ClCompile Include="42747.cpp">
+      <Filter>소스 파일\Programmers\정렬</Filter>
+    </ClCompile>
+    <ClCompile Include="43238.cpp">
+      <Filter>소스 파일\Programmers\이분탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="43236.cpp">
+      <Filter>소스 파일\Programmers\이분탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="2599.cpp">
+      <Filter>소스 파일\BaekJoon\S4</Filter>
+    </ClCompile>
+    <ClCompile Include="42626.cpp">
+      <Filter>소스 파일\Programmers\Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="49189.cpp">
+      <Filter>소스 파일\Programmers\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="1966.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="1541.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
+    <ClCompile Include="KakaoFriends_ColoringBook.cpp">
+      <Filter>소스 파일\Kakao_Blind_2017</Filter>
+    </ClCompile>
+    <ClCompile Include="5525.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
+    <ClCompile Include="12936.cpp">
+      <Filter>소스 파일\Programmers\Level 3</Filter>
+    </ClCompile>
+    <ClCompile Include="15649.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+    <ClCompile Include="42883.cpp">
+      <Filter>소스 파일\Programmers\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="42885.cpp">
+      <Filter>소스 파일\Programmers\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="42861%28X%29.cpp">
+      <Filter>소스 파일\Programmers\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>소스 파일\Naver_2021</Filter>
+    </ClCompile>
+    <ClCompile Include="naver_1.cpp">
+      <Filter>소스 파일\Naver_2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021_1.cpp">
+      <Filter>소스 파일\Kakao_Blind_2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021_2.cpp">
+      <Filter>소스 파일\Kakao_Blind_2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021_3.cpp">
+      <Filter>소스 파일\Kakao_Blind_2021</Filter>
+    </ClCompile>
+    <ClCompile Include="naver_2.cpp">
+      <Filter>소스 파일\Naver_2021</Filter>
+    </ClCompile>
+    <ClCompile Include="naver_3.cpp">
+      <Filter>소스 파일\Naver_2021</Filter>
+    </ClCompile>
+    <ClCompile Include="14889.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
