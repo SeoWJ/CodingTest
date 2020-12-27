@@ -360,5 +360,8 @@
     <ClCompile Include="1932_%27정수 삼각형%27.cpp">
       <Filter>소스 파일\BaekJoon\S1</Filter>
     </ClCompile>
+    <ClCompile Include="1991_%27트리 순회%27.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
