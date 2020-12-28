@@ -4,108 +4,80 @@
 
 using namespace std;
 
-struct Node {
-	Node* Parent = NULL;
-	Node* LeftChild = NULL;
-	Node* RightChild = NULL;
-
-	char Data = NULL;
-};
-
-class BinaryTree {
+class Node {
 public:
-	Node* Root;
+	char Data;
 
-	BinaryTree() { Root = NULL; }
-	void insert(char parent, char left, char right);
-	Node* find(Node* current, char data);
-	void preorder(Node* current);
-	void inorder(Node* current);
-	void postorder(Node* current);
+	Node* Left = NULL;
+	Node* Right = NULL;
+
+	Node(char _Data, Node* _Left, Node* _Right) {
+		Data = _Data;
+		Left = _Left;
+		Right = _Right;
+	}
 };
+
+void preorder(Node* n);
+void inorder(Node* n);
+void postorder(Node* n);
 
 int main(int argc, char* argv[]) {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	BinaryTree* bt = new BinaryTree();
+	int N; cin >> N;
 
-	int n; cin >> n;
+	Node* Tree[26] = { NULL };
 
-	for (int i = 0; i < n; i++) {
-		char p, l, r;
-		cin >> p >> l >> r;
+	for (int i = 0; i < N; i++) {
+		char parent, left, right;
+		cin >> parent >> left >> right;
 
-		bt->insert(p, l, r);
+		if (Tree[parent - 'A'] == NULL) {
+			if (left != '.' && Tree[left - 'A'] == NULL)
+				Tree[left - 'A'] = new Node(left, NULL, NULL);
+			if (right != '.' && Tree[right - 'A'] == NULL)
+				Tree[right - 'A'] = new Node(right, NULL, NULL);
+			
+			Tree[parent - 'A'] = new Node(parent, NULL, NULL);
+			if (left != '.')
+				Tree[parent - 'A']->Left = Tree[left - 'A'];
+			if (right != '.')
+				Tree[parent - 'A']->Right = Tree[right - 'A'];
+		}
+		else {
+			if (left != '.' && Tree[left - 'A'] == NULL)
+				Tree[left - 'A'] = new Node(left, NULL, NULL);
+			if (right != '.' && Tree[right - 'A'] == NULL)
+				Tree[right - 'A'] = new Node(right, NULL, NULL);
+
+			if(left != '.') Tree[parent - 'A']->Left = Tree[left - 'A'];
+			if(right != '.') Tree[parent - 'A']->Right = Tree[right - 'A'];
+		}
 	}
 
-	bt->preorder(bt->Root);
-	cout << endl;
-	bt->inorder(bt->Root);
-	cout << endl;
-	bt->postorder(bt->Root);
-	cout << endl;
+	preorder(Tree[0]); cout << endl;
+	inorder(Tree[0]); cout << endl;
+	postorder(Tree[0]); cout << endl;
 
 	return 0;
 }
 
-void BinaryTree::insert(char _parent, char _left, char _right) {
-	if (Root == NULL) {
-		Root = new Node();
-		Root->Data = _parent;
-		Root->LeftChild = new Node();
-		Root->LeftChild->Data = _left;
-		Root->RightChild = new Node();
-		Root->RightChild->Data = _right;
-	}
-	else {
-		Node* parent = find(this->Root, _parent);
-		
-		if (_left != '.') {
-			parent->LeftChild = new Node();
-			parent->LeftChild->Data = _left;
-		}
-		if (_right != '.') {
-			parent->RightChild = new Node();
-			parent->RightChild->Data = _right;
-		}
-	}
+void preorder(Node* n) {
+	cout << n->Data;
+	if (n->Left != NULL) preorder(n->Left);
+	if (n->Right != NULL) preorder(n->Right);
 }
 
-Node* BinaryTree::find(Node* current, char data) {
-	if (current->Data == data)
-		return current;
-	else {
-		Node* result = NULL;
-
-		if (current->LeftChild != NULL) {
-			result = find(current->LeftChild, data);
-			if (result != NULL)
-				return result;
-		}
-		if(current->RightChild != NULL) {
-			result = find(current->RightChild, data);
-			if (result != NULL)
-				return result;
-		}
-	}
+void inorder(Node* n) {
+	if (n->Left != NULL) inorder(n->Left);
+	cout << n->Data;
+	if (n->Right != NULL) inorder(n->Right);
 }
 
-void BinaryTree::preorder(Node* current) {
-	cout << current->Data;
-	if (current->LeftChild != NULL) preorder(current->LeftChild);
-	if (current->RightChild != NULL) preorder(current->RightChild);
-}
-
-void BinaryTree::inorder(Node* current) {
-	if (current->LeftChild != NULL) inorder(current->LeftChild);
-	cout << current->Data;
-	if (current->RightChild != NULL) inorder(current->RightChild);
-}
-
-void BinaryTree::postorder(Node* current) {
-	if (current->LeftChild != NULL) postorder(current->LeftChild);
-	if (current->RightChild != NULL) postorder(current->RightChild);
-
-	cout << current->Data;
+void postorder(Node* n) {
+	if (n->Left != NULL) postorder(n->Left);
+	if (n->Right != NULL) postorder(n->Right);
+	cout << n->Data;
 }
