@@ -375,5 +375,8 @@
     <ClCompile Include="15654_%27N과 M (5)%27.cpp">
       <Filter>소스 파일\BaekJoon\S3</Filter>
     </ClCompile>
+    <ClCompile Include="11725_%27트리의 부모 찾기%27.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
