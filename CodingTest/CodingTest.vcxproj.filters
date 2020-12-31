@@ -378,5 +378,8 @@
     <ClCompile Include="11725_%27트리의 부모 찾기%27.cpp">
       <Filter>소스 파일\BaekJoon\S2</Filter>
     </ClCompile>
+    <ClCompile Include="9465_%27스티커%27.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
