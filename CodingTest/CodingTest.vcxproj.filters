@@ -381,5 +381,8 @@
     <ClCompile Include="9465_%27스티커%27.cpp">
       <Filter>소스 파일\BaekJoon\S2</Filter>
     </ClCompile>
+    <ClCompile Include="11660_%27구간 합 구하기 (5)%27.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
