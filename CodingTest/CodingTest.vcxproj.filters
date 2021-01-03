@@ -384,5 +384,8 @@
     <ClCompile Include="11660_%27구간 합 구하기 (5)%27.cpp">
       <Filter>소스 파일\BaekJoon\S1</Filter>
     </ClCompile>
+    <ClCompile Include="9663_%27N-Queen%27.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
