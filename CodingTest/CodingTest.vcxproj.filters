@@ -387,5 +387,8 @@
     <ClCompile Include="9663_%27N-Queen%27.cpp">
       <Filter>소스 파일\BaekJoon\G5</Filter>
     </ClCompile>
+    <ClCompile Include="9251_%27LCS%27.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
