@@ -7,74 +7,55 @@
 using namespace std;
 
 int N;
-int dx[8] = { 1, 1, 0, -1, -1, -1 , 0, 1 };
-int dy[8] = { 0, 1, 1, 1, 0, -1, -1, -1 };
+int dx[3] = { -1, 0, 1 };
+int answer = 0;
 
 void solution();
-void bruteForce(vector<vector<bool>> map, int _x, int _y);
+void bruteForce(int y, vector<int> QueenPosition);
 
 int main(int argc, char* argv[]) {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
-
+	
 	cin >> N;
 	solution();
+
+	cout << answer << endl;
 
 	return 0;
 }
 
 void solution() {
-	vector<vector<bool>> map;
-	vector<bool> temp;
-	temp.assign(N, false);
-	map.assign(N, temp);
+	for (int i = 0; i < N; i++) {
+		bruteForce(1, { i });
+	}
+}
 
-	deque<vector<vector<bool>>> map_list;
-	deque<vector<vector<bool>>> answer;
-
-	for (int y = 0; y < N; y++) {
-		if (y == 0) {
-			map_list.push_back(map);
-
-			for (int x = 0; x < N; x++) {
-				map[y][x] = true;
-				map_list.push_back(map);
-				map[y][x] = false;
-			}
-		}
-		else {
-			deque<vector<vector<bool>>> cpy_map_list = map_list;
-			map_list.clear();
-			
-			while (!cpy_map_list.empty()) {
-				map_list.push_back(cpy_map_list.front());
-
-				for (int x = 0; x < N; x++) {
-					bool CanPutQueen = true;
-					
-					for (int i = 0; i < 8; i++) {
-						int cx = x + dx[i];
-						int cy = y + dy[i];
-
-						while (0 <= cx && cx < N && 0 <= cy && cy < N && CanPutQueen) {
-							if (cpy_map_list.front()[cy][cx] == true)
-								CanPutQueen = false;
-							cx += dx[i];
-							cy += dy[i];
-						}
-					}
-
-					if (CanPutQueen) {
-						cpy_map_list.front()[y][x] = true;
-						map_list.push_back(cpy_map_list.front());
-						cpy_map_list.front()[y][x] = false;
-					}
-				}
-
-				cpy_map_list.pop_front();
-			}
-		}
+void bruteForce(int y, vector<int> QueenPosition) {
+	if (QueenPosition.size() == N) {
+		answer++;
+		return;
 	}
 
-	cout << map_list.front()[0][0] << endl;
+	for (int x = 0; x < N; x++) {
+		bool CanPutQueen = true;
+
+		for (int i = 0; i < 3; i++) {
+			int cy = y - 1;
+			int cx = x + dx[i];
+
+			while (0 <= cy && 0 <= cx && CanPutQueen) {
+				if (QueenPosition[cy] == cx)
+					CanPutQueen = false;
+				cy--;
+				cx += dx[i];
+			}
+		}
+
+		if (CanPutQueen) {
+			QueenPosition.push_back(x);
+			bruteForce(y + 1, QueenPosition);
+			QueenPosition.pop_back();
+		}
+	}
 }
