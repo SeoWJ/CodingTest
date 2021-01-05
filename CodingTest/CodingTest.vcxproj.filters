@@ -390,5 +390,8 @@
     <ClCompile Include="9251_%27LCS%27.cpp">
       <Filter>소스 파일\BaekJoon\G5</Filter>
     </ClCompile>
+    <ClCompile Include="1074_%27Z%27.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
