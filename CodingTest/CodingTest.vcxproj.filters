@@ -399,5 +399,8 @@
     <ClCompile Include="1197_%27최소 스패닝 트리%27.cpp">
       <Filter>소스 파일\BaekJoon\G4</Filter>
     </ClCompile>
+    <ClCompile Include="1753_%27최단경로%27.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
