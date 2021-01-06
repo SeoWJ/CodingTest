@@ -396,5 +396,8 @@
     <ClCompile Include="1967_%27트리의 지름%27.cpp">
       <Filter>소스 파일\BaekJoon\G4</Filter>
     </ClCompile>
+    <ClCompile Include="1197_%27최소 스패닝 트리%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
