@@ -3,58 +3,48 @@
 #include <vector>
 
 #define endl '\n'
-#define INFINITY 0x7FFFFFFF
+#define INFINITY 0x1FFFFFFF
 
 using namespace std;
 
-struct edge {
-	int start;
+struct Edge {
 	int destination;
 	int weight;
 
-	edge(int s, int d, int w) {
-		start = s;
+	Edge(int d, int w) {
 		destination = d;
 		weight = w;
 	}
 };
 
-struct vertex {
-	bool visit = false;
-	int dist = INFINITY;
-	vector<edge> edge_list;
-};
+int V, E, start_vertex;
 
-struct compare {
-	bool operator() (edge& e1, edge& e2) {
-		return e1.weight > e2.weight;
-	}
-};
+vector<Edge> edges[20001];
+int dist[20001] = { 0 };
 
-int V, E, start;
-vertex graph[20001];
-int visit_count = 0;
-
-void dijkstra(int start_point);
+void dijkstra(int start_vertex);
 
 int main(int argc, char* argv[]) {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	cin >> V >> E >> start;
+	cin >> V >> E >> start_vertex;
 
 	for (int i = 0; i < E; i++) {
-		int u, v, w;
-		cin >> u >> v >> w;
-		
-		graph[u].edge_list.push_back(edge(u, v, w));
+		int start, destination, weight;
+		cin >> start >> destination >> weight;
+
+		edges[start].push_back(Edge(destination, weight));
 	}
 
-	dijkstra(start);
+	for (int i = 1; i <= V; i++)
+		dist[i] = INFINITY;
+
+	dijkstra(start_vertex);
 
 	for (int i = 1; i <= V; i++) {
-		if (graph[i].dist != INFINITY)
-			cout << graph[i].dist << endl;
+		if (dist[i] != INFINITY)
+			cout << dist[i] << endl;
 		else
 			cout << "INF" << endl;
 	}
@@ -62,33 +52,26 @@ int main(int argc, char* argv[]) {
 	return 0;
 }
 
-void dijkstra(int start_point) {
-	graph[start].dist = 0;
-	graph[start].visit = true;
-	visit_count++;
+void dijkstra(int start_vertex) {
+	dist[start_vertex] = 0;
 
-	priority_queue<edge, vector<edge>, compare> pq;
+	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+	pq.push({ 0, start_vertex });
 
-	for (unsigned int i = 0; i < graph[start_point].edge_list.size(); i++) {
-		pq.push(graph[start_point].edge_list[i]);
-	}
-
-	while (!pq.empty() || visit_count == V) {
-		int start = pq.top().start;
-		int destination = pq.top().destination;
-		int weight = pq.top().weight;
+	while (!pq.empty()) {
+		int current_node = pq.top().second;
+		int cost = pq.top().first;
 
 		pq.pop();
 
-		if (graph[destination].visit == true)
-			continue;
-		else {
-			graph[destination].visit = true;
-			visit_count++;
-			graph[destination].dist = graph[start].dist + weight;
+		for (unsigned int i = 0; i < edges[current_node].size(); i++) {
+			int new_distance = dist[current_node] + edges[current_node][i].weight;
+			int before_distance = dist[edges[current_node][i].destination];
 
-			for (unsigned int i = 0; i < graph[destination].edge_list.size(); i++)
-				pq.push(graph[destination].edge_list[i]);
+			if (new_distance < before_distance) {
+				dist[edges[current_node][i].destination] = new_distance;
+				pq.push({ new_distance, edges[current_node][i].destination });
+			}
 		}
 	}
 }
