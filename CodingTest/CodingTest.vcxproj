@@ -163,7 +163,10 @@
     <ClCompile Include="1629_%27곱셈%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1753_%27최단경로%27.cpp" />
+    <ClCompile Include="1753_%27최단경로%27.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1916_%27최소비용 구하기%27.cpp" />
     <ClCompile Include="1932_%27정수 삼각형%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
