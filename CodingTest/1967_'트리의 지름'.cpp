@@ -1,109 +1,99 @@
 #include <iostream>
+#include <queue>
 #include <vector>
 
 #define endl '\n'
+#define INFINITY 101
 
 using namespace std;
 
-struct Node {
-	int num;
-	int edge;
-	vector<Node*> child;
+struct Edge {
+	int destination;
+	int weight;
+
+	Edge(int d, int w) {
+		destination = d;
+		weight = w;
+	}
 };
 
-class Tree {
-public:
-	Node* root;
+vector<Edge> edges[10001];
+int dist[10001];
+bool isLeaf[10001] = { false };
 
-	void insert(vector<int> input);
-	Node* find(Node*n, int target);
-	void preOrder(int current_length, Node* n);
-};
-
-int answer = 0;
+void dijkstra(int start_vertex, int dist[]);
 
 int main(int argc, char* argv[]) {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	int N; cin >> N;
-
-	Tree* tree = new Tree();
+	int n;
+	cin >> n;
 
 	int input;
-	vector<int> input_3;
+	vector<int> temp;
 
-	/*while (cin >> input) {
-		input_3.push_back(input);
+	while (cin >> input) {
+		temp.push_back(input);
 
-		if (input_3.size() == 3) {
-			tree->insert(input_3);
-		}
-	}*/
+		if (temp.size() == 3) {
+			edges[temp[0]].push_back(Edge(temp[1], temp[2]));
+			edges[temp[1]].push_back(Edge(temp[0], temp[2]));
 
-	while (1) {
-		cin >> input;
-		
-		if (input == -1) break;
-
-		input_3.push_back(input);
-
-		if (input_3.size() == 3) {
-			tree->insert(input_3);
-			input_3.clear();
+			temp.clear();
 		}
 	}
 
-	tree->preOrder(0, tree->root);
+	/*while (1) {
+		cin >> input;
+		if (input == -1) break;
 
-	cout << answer << endl;
+		temp.push_back(input);
+
+		if (temp.size() == 3) {
+			edges[temp[0]].push_back(Edge(temp[1], temp[2]));
+			edges[temp[1]].push_back(Edge(temp[0], temp[2]));
+
+			temp.clear();
+		}
+	}*/
+
+	int tree_diameter = 0;
+
+	for (int i = 1; i <= n; i++) {
+		dijkstra(i, dist);
+
+		for (int j = 1; j <= n; j++)
+			tree_diameter = tree_diameter > dist[j] ? tree_diameter : dist[j];
+	}
+
+	cout << tree_diameter << endl;
 
 	return 0;
 }
 
-Node* Tree::find(Node* n, int target) {
-	if (n->num == target)
-		return n;
-	else {
-		Node* nn = NULL;
+void dijkstra(int start_vertex, int dist[]) {
+	for (int i = 0; i < 10001; i++)
+		dist[i] = INFINITY;
+	dist[start_vertex] = 0;
 
-		for (unsigned int i = 0; i < n->child.size(); i++) {
-			if (nn == NULL)
-				nn = find(n->child[i], target);
+	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+
+	pq.push({ 0, start_vertex });
+
+	while (!pq.empty()) {
+		int next_vertex = pq.top().second;
+
+		pq.pop();
+
+		for (unsigned int i = 0; i < edges[next_vertex].size(); i++) {
+			int before_distance = dist[edges[next_vertex][i].destination];
+			int new_distance = dist[next_vertex] + edges[next_vertex][i].weight;
+
+			if (before_distance > new_distance) {
+				dist[edges[next_vertex][i].destination] = new_distance;
+				pq.push({ new_distance, edges[next_vertex][i].destination });
+			}
 		}
-
-		return nn;
-	}
-}
-
-void Tree::insert(vector<int> input) {
-	if (root == NULL) {
-		root = new Node();
-		Node* n = new Node();
-		
-		root->num = input[0];
-		root->edge = 0;
-		n->num = input[1];
-		n->edge = input[2];
-
-		root->child.push_back(n);
-	}
-	else {
-		Node* parent = find(root, input[0]);
-		Node* child = new Node();
-
-		child->num = input[1];
-		child->edge = input[2];
-
-		parent->child.push_back(child);
-	}
-}
-
-void Tree::preOrder(int current_length, Node* n) {
-	if (current_length > answer)
-		answer = current_length;
-
-	for (unsigned int i = 0; i < n->child.size(); i++) {
-		preOrder(current_length + n->child[i]->edge, n->child[i]);
 	}
 }
