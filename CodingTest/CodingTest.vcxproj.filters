@@ -94,6 +94,9 @@
     <Filter Include="소스 파일\Naver_2021">
       <UniqueIdentifier>{09edd2e7-65e6-413a-b4db-895321b0acd4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\G3">
+      <UniqueIdentifier>{7acf1f12-5c13-43cb-aa9d-500ebda4123e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1309.cpp">
@@ -404,6 +407,9 @@
     </ClCompile>
     <ClCompile Include="1967_%27트리의 지름%27.cpp">
       <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
+    <ClCompile Include="1167_%27트리의 지름%27.cpp">
+      <Filter>소스 파일\BaekJoon\G3</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
