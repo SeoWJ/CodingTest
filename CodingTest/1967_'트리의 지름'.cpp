@@ -3,97 +3,67 @@
 #include <vector>
 
 #define endl '\n'
+#define max(a, b) a > b ? a : b
 #define INFINITY 101
 
 using namespace std;
 
-struct Edge {
-	int destination;
-	int weight;
+int N;
+deque<pair<int, int>> connection[10001];
+deque<int> leaf;
+bool visit[10001];
+int tree_diameter = 0;
 
-	Edge(int d, int w) {
-		destination = d;
-		weight = w;
-	}
-};
-
-vector<Edge> edges[10001];
-int dist[10001];
-bool isLeaf[10001] = { false };
-
-void dijkstra(int start_vertex, int dist[]);
+void DFS(int start, int diameter);
+void clearVisit();
 
 int main(int argc, char* argv[]) {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	int n;
-	cin >> n;
+	cin >> N;
 
-	int input;
-	vector<int> temp;
-
-	while (cin >> input) {
-		temp.push_back(input);
-
-		if (temp.size() == 3) {
-			edges[temp[0]].push_back(Edge(temp[1], temp[2]));
-			edges[temp[1]].push_back(Edge(temp[0], temp[2]));
-
-			temp.clear();
-		}
+	int start, destination, weight;
+	
+	while (cin >> start >> destination >> weight) {
+		connection[start].push_back({ destination, weight });
+		connection[destination].push_back({ start, weight });
 	}
 
 	/*while (1) {
-		cin >> input;
-		if (input == -1) break;
+		cin >> start;
+		if (start == -1) break;
+		cin >> destination >> weight;
 
-		temp.push_back(input);
-
-		if (temp.size() == 3) {
-			edges[temp[0]].push_back(Edge(temp[1], temp[2]));
-			edges[temp[1]].push_back(Edge(temp[0], temp[2]));
-
-			temp.clear();
-		}
+		connection[start].push_back({ destination, weight });
+		connection[destination].push_back({ start, weight });
 	}*/
 
-	int tree_diameter = 0;
+	for (int i = 1; i <= N; i++) {
+		if (connection[i].size() == 1)
+			leaf.push_back(i);
+	}
 
-	for (int i = 1; i <= n; i++) {
-		dijkstra(i, dist);
-
-		for (int j = 1; j <= n; j++)
-			tree_diameter = tree_diameter > dist[j] ? tree_diameter : dist[j];
+	for (unsigned int i = 0; i < leaf.size(); i++) {
+		clearVisit();
+		DFS(leaf[i], 0);
 	}
 
 	cout << tree_diameter << endl;
-
-	return 0;
 }
 
-void dijkstra(int start_vertex, int dist[]) {
-	for (int i = 0; i < 10001; i++)
-		dist[i] = INFINITY;
-	dist[start_vertex] = 0;
+void DFS(int start, int diameter) {
+	visit[start] = true;
+	tree_diameter = max(tree_diameter, diameter);
 
-	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-
-	pq.push({ 0, start_vertex });
-
-	while (!pq.empty()) {
-		int next_vertex = pq.top().second;
-
-		pq.pop();
-
-		for (unsigned int i = 0; i < edges[next_vertex].size(); i++) {
-			int before_distance = dist[edges[next_vertex][i].destination];
-			int new_distance = dist[next_vertex] + edges[next_vertex][i].weight;
-
-			if (before_distance > new_distance) {
-				dist[edges[next_vertex][i].destination] = new_distance;
-				pq.push({ new_distance, edges[next_vertex][i].destination });
-			}
+	for (unsigned int i = 0; i < connection[start].size(); i++) {
+		if (visit[connection[start][i].first] == false) {
+			DFS(connection[start][i].first, diameter + connection[start][i].second);
 		}
 	}
+}
+
+void clearVisit() {
+	for (int i = 0; i <= N; i++)
+		visit[i] = false;
 }
