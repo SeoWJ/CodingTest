@@ -417,5 +417,8 @@
     <ClCompile Include="2263_%27트리의 순회%27.cpp">
       <Filter>소스 파일\BaekJoon\G3</Filter>
     </ClCompile>
+    <ClCompile Include="1918_%27후위 표기식%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
