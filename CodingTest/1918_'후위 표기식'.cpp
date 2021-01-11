@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
 	cin >> original;
 
 	Node* root = parsing(original);
-	while(idx != original.size())
+	while (idx != original.size())
 		root = parsing(root, original);
 
 	postorder(root);
@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
 }
 
 Node* parsing(string formula) {
-	Node* operand1, *operand2, *symbol;
+	Node* operand1, * operand2, * symbol;
 
 	if (formula[idx] == '(') {
 		idx++;
@@ -51,6 +51,7 @@ Node* parsing(string formula) {
 
 	symbol = new Node;
 	while (formula[idx] == ')') idx++;
+	if (formula[idx] == '\0') return operand1;
 	symbol->data = formula[idx];
 	symbol->left_child = operand1;
 	idx++;
@@ -76,6 +77,7 @@ Node* parsing(Node* _operand1, string formula) {
 
 	symbol = new Node;
 	while (formula[idx] == ')') idx++;
+	if (formula[idx] == '\0') return operand1;
 	symbol->data = formula[idx];
 	symbol->left_child = operand1;
 	idx++;
@@ -95,8 +97,8 @@ Node* parsing(Node* _operand1, string formula) {
 }
 
 void postorder(Node* n) {
-	if(n->left_child != NULL) postorder(n->left_child);
-	if(n->right_child != NULL) postorder(n->right_child);
+	if (n->left_child != NULL) postorder(n->left_child);
+	if (n->right_child != NULL) postorder(n->right_child);
 
 	cout << n->data;
 }
