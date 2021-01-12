@@ -423,5 +423,8 @@
     <ClCompile Include="14500_%27테트로미노%27.cpp">
       <Filter>소스 파일\BaekJoon\G5</Filter>
     </ClCompile>
+    <ClCompile Include="12865_%27평범한 배낭%27.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
