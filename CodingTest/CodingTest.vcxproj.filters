@@ -438,5 +438,8 @@
     <ClCompile Include="1764_%27듣보잡%27.cpp">
       <Filter>소스 파일\BaekJoon\S4</Filter>
     </ClCompile>
+    <ClCompile Include="11723_%27집합%27.cpp">
+      <Filter>소스 파일\BaekJoon\S5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
