@@ -1,3 +1,6 @@
 .vs/
 debug/
 CodingTest/Debug/
+CodingTest/*.vcxproj
+CodingTest/*.filters
+CodingTest/*.user
