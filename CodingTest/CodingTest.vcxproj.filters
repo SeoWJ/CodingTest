@@ -432,5 +432,8 @@
     <ClCompile Include="13549_%27숨바꼭질 3%27.cpp">
       <Filter>소스 파일\BaekJoon\G5</Filter>
     </ClCompile>
+    <ClCompile Include="1620_%27나는야 포켓몬 마스터 이다솜%27.cpp">
+      <Filter>소스 파일\BaekJoon\S4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
