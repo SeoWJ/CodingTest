@@ -175,7 +175,9 @@
     <ClCompile Include="15654_%27N과 M (5)%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1620_%27나는야 포켓몬 마스터 이다솜%27.cpp" />
+    <ClCompile Include="1620_%27나는야 포켓몬 마스터 이다솜%27.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1629_%27곱셈%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -185,6 +187,7 @@
     <ClCompile Include="1753_%27최단경로%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1764_%27듣보잡%27.cpp" />
     <ClCompile Include="1916_%27최소비용 구하기%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
