@@ -444,5 +444,11 @@
     <ClCompile Include="11279_%27최대 힙%27.cpp">
       <Filter>소스 파일\BaekJoon\S2</Filter>
     </ClCompile>
+    <ClCompile Include="1927_%27최소 힙%27.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
+    <ClCompile Include="2630_%27색종이 만들기%27.cpp">
+      <Filter>소스 파일\BaekJoon\S3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
