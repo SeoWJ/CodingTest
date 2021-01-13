@@ -26,35 +26,37 @@ int main(int argc, char* argv[]) {
 }
 
 void bfs(int start) {
-	for (int i = 0; i < MAX_SIZE; i++)
-		dist[i] = INFINITY;
-	
+	int cnt = 1;
+	for (int i = start + 1; i < MAX_SIZE; i++) dist[i] = cnt++;
+	cnt = 1;
+	for (int i = start - 1; i >= 0; i--) dist[i] = cnt++;
+
 	queue<int> Q;
 
 	dist[start] = 0;
 	Q.push(start);
 
 	while (!Q.empty()) {
-		int current = Q.front();
+		int current_position = Q.front();
 		Q.pop();
 
-		for (int i = current; i < MAX_SIZE; i *= 2) {
-			dist[i] = dist[current];
-			if (i == K) return;
-
-			if (i + 1 < MAX_SIZE && dist[i + 1] > dist[current] + 1) {
-				dist[i + 1] = dist[current] + 1;
-				if (i + 1 == K) return;
-				Q.push(i + 1);
+		for (int teleport = current_position * 2; teleport < MAX_SIZE && teleport != 0; teleport *= 2) {
+			if (dist[teleport] > dist[current_position]) {
+				dist[teleport] = dist[current_position];
+				Q.push(teleport);
 			}
-			if (i - 1 >= 0 && dist[i - 1] > dist[current] + 1) {
-				dist[i - 1] = dist[current] + 1;
-				if (i - 1 == K) return;
-				Q.push(i - 1);
-			}
+		}
 
-			if (i == 0)
-				break;
+		int walk_forward = current_position + 1;
+		int walk_backward = current_position - 1;
+
+		if (walk_backward >= 0 && dist[walk_backward] >= dist[current_position] + 1) {
+			dist[walk_backward] = dist[current_position] + 1;
+			Q.push(walk_backward);
+		}
+		if (walk_forward < MAX_SIZE && dist[walk_forward] >= dist[current_position] + 1) {
+			dist[walk_forward] = dist[current_position] + 1;
+			Q.push(walk_forward);
 		}
 	}
 }
