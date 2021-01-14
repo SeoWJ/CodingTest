@@ -450,5 +450,8 @@
     <ClCompile Include="2630_%27색종이 만들기%27.cpp">
       <Filter>소스 파일\BaekJoon\S3</Filter>
     </ClCompile>
+    <ClCompile Include="7576_%27토마토%27.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
