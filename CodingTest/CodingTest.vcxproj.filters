@@ -456,5 +456,8 @@
     <ClCompile Include="7662_%27이중 우선순위 큐%27.cpp">
       <Filter>소스 파일\BaekJoon\G5</Filter>
     </ClCompile>
+    <ClCompile Include="18870_%27좌표 압축%27.cpp">
+      <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
