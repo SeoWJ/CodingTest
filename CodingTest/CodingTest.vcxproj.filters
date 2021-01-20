@@ -285,9 +285,6 @@
     <ClCompile Include="42747.cpp">
       <Filter>소스 파일\Programmers\정렬</Filter>
     </ClCompile>
-    <ClCompile Include="43238.cpp">
-      <Filter>소스 파일\Programmers\이분탐색</Filter>
-    </ClCompile>
     <ClCompile Include="43236.cpp">
       <Filter>소스 파일\Programmers\이분탐색</Filter>
     </ClCompile>
@@ -464,6 +461,9 @@
     </ClCompile>
     <ClCompile Include="5430_%27AC%27.cpp">
       <Filter>소스 파일\BaekJoon\S2</Filter>
+    </ClCompile>
+    <ClCompile Include="43238_%27입국심사%27.cpp">
+      <Filter>소스 파일\Programmers\이분탐색</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
