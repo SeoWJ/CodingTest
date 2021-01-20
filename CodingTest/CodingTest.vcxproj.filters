@@ -252,9 +252,6 @@
     <ClCompile Include="9095_BruteForce.cpp">
       <Filter>소스 파일\BaekJoon\S3</Filter>
     </ClCompile>
-    <ClCompile Include="43163.cpp">
-      <Filter>소스 파일\Programmers\DFS,BFS</Filter>
-    </ClCompile>
     <ClCompile Include="1051.cpp">
       <Filter>소스 파일\BaekJoon\S3</Filter>
     </ClCompile>
@@ -464,6 +461,9 @@
     </ClCompile>
     <ClCompile Include="43238_%27입국심사%27.cpp">
       <Filter>소스 파일\Programmers\이분탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="43163_%27단어 변환%27.cpp">
+      <Filter>소스 파일\Programmers\DFS,BFS</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
