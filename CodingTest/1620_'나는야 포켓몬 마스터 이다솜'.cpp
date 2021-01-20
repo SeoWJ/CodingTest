@@ -1,4 +1,6 @@
-#include <iostream>
+// Sol 1.
+
+/*#include <iostream>
 #include <vector>
 #include <string>
 
@@ -45,6 +47,45 @@ int main(int argc, char* argv[]) {
 				}
 			}
 		}
+	}
+
+	return 0;
+}*/
+
+// Sol 2.
+
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+
+#define endl '\n'
+
+using namespace std;
+
+int main(int argc, char* argv[]) {
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+
+	int N, M;
+	cin >> N >> M;
+
+	unordered_map<int, string> pokemon_int;
+	unordered_map<string, int> pokemon_str;
+
+	for (int i = 1; i <= N; i++) {
+		string input; cin >> input;
+
+		pokemon_int[i] = input;
+		pokemon_str[input] = i;
+	}
+
+	for (int i = 0; i < M; i++) {
+		string input; cin >> input;
+
+		if ('0' <= input[0] && input[0] <= '9')
+			cout << pokemon_int[atoi(input.c_str())] << endl;
+		else
+			cout << pokemon_str[input] << endl;
 	}
 
 	return 0;
