@@ -41,3 +41,39 @@ int solution(int n, vector<vector<int>> computers) {
 
 	return answer;
 }*/
+
+// Sol 2.
+
+/*#include <string>
+#include <vector>
+
+using namespace std;
+
+int answer;
+bool visit[200] = { false };
+int N;
+vector<vector<int>> computerConnection;
+
+void DFS(int computerNumber, bool answerModified) {
+	if (visit[computerNumber] == true) return;
+
+	if (!answerModified) answer++;
+	
+	visit[computerNumber] = true;
+
+	for (unsigned int i = 0; i < N; i++) {
+		if (computerConnection[computerNumber][i] == 1 && visit[i] == false)
+			DFS(i, true);
+	}
+}
+
+int solution(int n, vector<vector<int>> computers) {
+	answer = 0;
+	N = n;
+	computerConnection = computers;
+
+	for (int i = 0; i < N; i++)
+		DFS(i, false);
+
+	return answer;
+}*/
