@@ -246,9 +246,6 @@
     <ClCompile Include="43165.cpp">
       <Filter>소스 파일\Programmers\DFS,BFS</Filter>
     </ClCompile>
-    <ClCompile Include="43162.cpp">
-      <Filter>소스 파일\Programmers\DFS,BFS</Filter>
-    </ClCompile>
     <ClCompile Include="9095_BruteForce.cpp">
       <Filter>소스 파일\BaekJoon\S3</Filter>
     </ClCompile>
@@ -290,9 +287,6 @@
     </ClCompile>
     <ClCompile Include="42626.cpp">
       <Filter>소스 파일\Programmers\Heap</Filter>
-    </ClCompile>
-    <ClCompile Include="49189.cpp">
-      <Filter>소스 파일\Programmers\Graph</Filter>
     </ClCompile>
     <ClCompile Include="1966.cpp">
       <Filter>소스 파일\BaekJoon\S3</Filter>
@@ -464,6 +458,12 @@
     </ClCompile>
     <ClCompile Include="43163_%27단어 변환%27.cpp">
       <Filter>소스 파일\Programmers\DFS,BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="43162_%27네트워크%27.cpp">
+      <Filter>소스 파일\Programmers\DFS,BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="49189_%27가장 먼 노드%27.cpp">
+      <Filter>소스 파일\Programmers\Graph</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
