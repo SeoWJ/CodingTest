@@ -240,9 +240,6 @@
     <ClCompile Include="42860%28X%29.cpp">
       <Filter>소스 파일\Programmers\Greedy</Filter>
     </ClCompile>
-    <ClCompile Include="42584.cpp">
-      <Filter>소스 파일\Programmers\Stack/Queue</Filter>
-    </ClCompile>
     <ClCompile Include="43165.cpp">
       <Filter>소스 파일\Programmers\DFS,BFS</Filter>
     </ClCompile>
@@ -469,6 +466,9 @@
       <Filter>소스 파일\Programmers\Graph</Filter>
     </ClCompile>
     <ClCompile Include="42587_%27프린터%27.cpp">
+      <Filter>소스 파일\Programmers\Stack/Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="42584_%27주식가격%27.cpp">
       <Filter>소스 파일\Programmers\Stack/Queue</Filter>
     </ClCompile>
   </ItemGroup>
