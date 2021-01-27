@@ -1,53 +1,58 @@
 #include <string>
 #include <vector>
 #include <queue>
-#include <algorithm>
 #include <iostream>
 
 using namespace std;
 
+struct Truck {
+	int weight;
+	int position;
+
+	Truck(int w, int p) { weight = w; position = p; }
+};
+
 int solution(int bridge_length, int weight, vector<int> truck_weights) {
 	int answer = 0;
+	
+	queue<int> truckWeights;
+	deque<Truck> crossingTruck;
+	int crossingTruckWeights = 0;
 
-	deque<int> dq_truck_weights;
-	for (unsigned int i = 0; i < truck_weights.size(); i++)
-		dq_truck_weights.push_back(truck_weights[i]);
-	int current_weight = 0;
-	int current_trucks = 0;
-	deque<pair<int, int>> trucks_on_bridge;
+	for (unsigned int i = 0; i < truck_weights.size(); i++) truckWeights.push(truck_weights[i]);
+	
+	while (!truckWeights.empty() || !crossingTruck.empty()) {
+		if (!truckWeights.empty() && crossingTruck.size() + 1 <= bridge_length && crossingTruckWeights + truckWeights.front() <= weight) {
+			for (unsigned int i = 0; i < crossingTruck.size(); i++)
+				crossingTruck[i].position++;
 
-	while (1) {
-		if (!dq_truck_weights.empty() && current_weight + dq_truck_weights.front() <= weight && current_trucks + 1 <= bridge_length) {
-			for (unsigned int i = 0; i < trucks_on_bridge.size(); i++)
-				trucks_on_bridge[i].second++;
-
-			trucks_on_bridge.push_back(make_pair(dq_truck_weights.front(), 1));
-			current_weight += dq_truck_weights.front();
-			current_trucks++;
-			answer += 1;
-			dq_truck_weights.pop_front();
+			crossingTruck.push_back(Truck(truckWeights.front(), 1));
+			crossingTruckWeights += truckWeights.front();
+			truckWeights.pop();
+			answer++;
 		}
 		else {
-			answer += (bridge_length + 1 - trucks_on_bridge.front().second);
-
-			for (int i = trucks_on_bridge.size() - 1; i >= 0; i--)
-				trucks_on_bridge[i].second += (bridge_length + 1 - trucks_on_bridge.front().second);
+			int timeFlow = (bridge_length - crossingTruck.front().position) + 1;
 			
-			current_weight -= trucks_on_bridge.front().first;
-			current_trucks--;
-			trucks_on_bridge.pop_front();
+			answer += timeFlow;
 
-			if (!dq_truck_weights.empty() && current_weight + dq_truck_weights.front() <= weight && current_trucks + 1 <= bridge_length) {
-				trucks_on_bridge.push_back(make_pair(dq_truck_weights.front(), 1));
-				current_weight += dq_truck_weights.front();
-				current_trucks++;
-				dq_truck_weights.pop_front();
+			for (unsigned int i = 0; i < crossingTruck.size(); i++)
+				crossingTruck[i].position += timeFlow;
+
+			crossingTruckWeights -= crossingTruck.front().weight;
+			crossingTruck.pop_front();
+
+			if (!truckWeights.empty() && crossingTruck.size() + 1 <= bridge_length && crossingTruckWeights + truckWeights.front() <= weight) {
+				crossingTruck.push_back(Truck(truckWeights.front(), 1));
+				crossingTruckWeights += truckWeights.front();
+				truckWeights.pop();
 			}
 		}
-
-		if (dq_truck_weights.empty() && trucks_on_bridge.empty())
-			break;
 	}
 
 	return answer;
+}
+
+int main() {
+	cout << solution(4, 10, { 1,2,3,10 }) << endl;
 }
