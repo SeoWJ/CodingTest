@@ -309,9 +309,6 @@
     <ClCompile Include="42885.cpp">
       <Filter>소스 파일\Programmers\Greedy</Filter>
     </ClCompile>
-    <ClCompile Include="42861%28X%29.cpp">
-      <Filter>소스 파일\Programmers\Greedy</Filter>
-    </ClCompile>
     <ClCompile Include="test.cpp">
       <Filter>소스 파일\Naver_2021</Filter>
     </ClCompile>
@@ -473,6 +470,12 @@
     </ClCompile>
     <ClCompile Include="42884_%27단속카메라%27.cpp">
       <Filter>소스 파일\Programmers\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="42861_%27섬 연결하기%27.cpp">
+      <Filter>소스 파일\Programmers\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="42627_%27디스크 컨트롤러%27.cpp">
+      <Filter>소스 파일\Programmers\Heap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
