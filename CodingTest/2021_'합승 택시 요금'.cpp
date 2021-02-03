@@ -1,4 +1,4 @@
-#include <string>
+/*#include <string>
 #include <vector>
 #include <queue>
 
@@ -82,4 +82,75 @@ void dijkstra(int startVertex, int* distanceArray) {
 			}
 		}
 	}
+}*/
+
+#include <string>
+#include <vector>
+
+#define INFINITE 0x0FFFFFFF
+
+using namespace std;
+
+int edges[201][201];
+
+void clear();
+void floydWashall();
+
+int N, S, A, B;
+
+int solution(int n, int s, int a, int b, vector<vector<int>> fares) {
+	int answer = 0;
+
+	N = n; S = s; A = a; B = b;
+
+	clear();
+
+	for (unsigned int i = 0; i < fares.size(); i++) {
+		int start = fares[i][0];
+		int destination = fares[i][1];
+		int weight = fares[i][2];
+
+		edges[start][destination] = edges[destination][start] = weight;
+	}
+
+	floydWashall();
+
+	int noTaxiSharingCost = edges[S][A] + edges[S][B];
+	int taxiSharingCost = INFINITE;
+
+	for (int midPoint = 1; midPoint <= N; midPoint++) {
+		int sharingCost = edges[S][midPoint] + edges[midPoint][A] + edges[midPoint][B];
+		taxiSharingCost = taxiSharingCost < sharingCost ? taxiSharingCost : sharingCost;
+	}
+
+	answer = taxiSharingCost < noTaxiSharingCost ? taxiSharingCost : noTaxiSharingCost;
+
+	return answer;
+}
+
+void floydWashall() {
+	for (int midPoint = 1; midPoint <= N; midPoint++) {
+		for (int start = 1; start <= N; start++) {
+			for (int destination = 1; destination <= N; destination++) {
+				int beforeDistance = edges[start][destination];
+				int newDistance = edges[start][midPoint] + edges[midPoint][destination];
+
+				if (newDistance < beforeDistance)
+					edges[start][destination] = newDistance;
+			}
+		}
+	}
+}
+
+void clear() {
+	for (int y = 0; y < 201; y++) {
+		for (int x = 0; x < 201; x++) {
+			if (y == x) edges[y][x] = 0;
+			else edges[y][x] = INFINITE;
+		}
+	}
+}
+
+int main() {
+	solution(6, 4, 6, 2, { {4, 1, 10},{3, 5, 24},{5, 6, 2},{3, 1, 41},{5, 1, 24},{4, 6, 50},{2, 4, 66},{2, 3, 22},{1, 6, 25} });
 }
