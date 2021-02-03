@@ -480,8 +480,11 @@
     <ClCompile Include="2021_%27광고삽입%27.cpp">
       <Filter>소스 파일\Kakao_Blind_2021</Filter>
     </ClCompile>
-    <ClCompile Include="1753_review.cpp">
-      <Filter>소스 파일\BaekJoon\G5</Filter>
+    <ClCompile Include="2021_%27합승 택시 요금%27.cpp">
+      <Filter>소스 파일\Kakao_Blind_2021</Filter>
+    </ClCompile>
+    <ClCompile Include="11404_%27플로이드%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
