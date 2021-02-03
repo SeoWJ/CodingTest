@@ -486,5 +486,8 @@
     <ClCompile Include="11404_%27플로이드%27.cpp">
       <Filter>소스 파일\BaekJoon\G4</Filter>
     </ClCompile>
+    <ClCompile Include="1389_%27케빈 베이컨의 6단계 법칙%27.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
