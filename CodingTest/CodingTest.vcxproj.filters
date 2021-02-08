@@ -97,6 +97,9 @@
     <Filter Include="소스 파일\BaekJoon\G3">
       <UniqueIdentifier>{7acf1f12-5c13-43cb-aa9d-500ebda4123e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Programmers\동적계획법">
+      <UniqueIdentifier>{9f4c9915-fea0-4b7a-ad57-db48c6b482c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1309.cpp">
@@ -488,6 +491,21 @@
     </ClCompile>
     <ClCompile Include="1389_%27케빈 베이컨의 6단계 법칙%27.cpp">
       <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
+    <ClCompile Include="12900_%272 x n 타일링%27.cpp">
+      <Filter>소스 파일\Programmers\Level 3</Filter>
+    </ClCompile>
+    <ClCompile Include="12927_%27야근 지수%27.cpp">
+      <Filter>소스 파일\Programmers\Level 3</Filter>
+    </ClCompile>
+    <ClCompile Include="12914_%27멀리 뛰기%27.cpp">
+      <Filter>소스 파일\Programmers\Level 3</Filter>
+    </ClCompile>
+    <ClCompile Include="43105_%27정수 삼각형%27.cpp">
+      <Filter>소스 파일\Programmers\동적계획법</Filter>
+    </ClCompile>
+    <ClCompile Include="42898_%27등굣길%27.cpp">
+      <Filter>소스 파일\Programmers\동적계획법</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
