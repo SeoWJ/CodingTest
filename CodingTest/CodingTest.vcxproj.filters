@@ -240,9 +240,6 @@
     <ClCompile Include="42862.cpp">
       <Filter>소스 파일\Programmers\Greedy</Filter>
     </ClCompile>
-    <ClCompile Include="42860%28X%29.cpp">
-      <Filter>소스 파일\Programmers\Greedy</Filter>
-    </ClCompile>
     <ClCompile Include="43165.cpp">
       <Filter>소스 파일\Programmers\DFS,BFS</Filter>
     </ClCompile>
@@ -509,6 +506,9 @@
     </ClCompile>
     <ClCompile Include="42895_%27N으로 표현%27.cpp">
       <Filter>소스 파일\Programmers\동적계획법</Filter>
+    </ClCompile>
+    <ClCompile Include="42860_%27조이스틱%27.cpp">
+      <Filter>소스 파일\Programmers\Greedy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
