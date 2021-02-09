@@ -451,7 +451,10 @@
     <ClCompile Include="42885.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="42898_%27등굣길%27.cpp" />
+    <ClCompile Include="42895_%27N으로 표현%27.cpp" />
+    <ClCompile Include="42898_%27등굣길%27.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="43105_%27정수 삼각형%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
