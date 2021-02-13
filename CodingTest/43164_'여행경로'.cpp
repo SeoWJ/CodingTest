@@ -1,4 +1,6 @@
-#include <string>
+// Sol 1.
+
+/*#include <string>
 #include <vector>
 #include <cstring>
 #include <iostream>
@@ -124,4 +126,65 @@ int main() {
 	cout << endl;
 
 	return 0;
+}*/
+
+// Sol 2.
+
+#include <string>
+#include <vector>
+#include <unordered_map>
+#include <queue>
+
+using namespace std;
+
+int ROUTEMAX;
+vector<string> answer;
+
+void DFS(string currentAirport, unordered_map<string, vector<pair<string, bool>>> unorderedMap, vector<string> route);
+
+vector<string> solution(vector<vector<string>> tickets) {
+	ROUTEMAX = tickets.size() + 1;
+
+	unordered_map<string, vector<pair<string, bool>>> unorderedMap;
+
+	for (unsigned int i = 0; i < tickets.size(); i++)
+		unorderedMap[tickets[i][0]].push_back({ tickets[i][1], false });
+
+	DFS("ICN", unorderedMap, { "ICN" });
+
+	return answer;
+}
+
+void DFS(string currentAirport, unordered_map<string, vector<pair<string, bool>>> unorderedMap, vector<string> route) {
+	if (route.size() == ROUTEMAX) {
+		if (answer == route) return;
+		
+		if (answer.empty()) {
+			answer = route;
+			return;
+		}
+		else {
+			for (unsigned int i = 0; i < answer.size(); i++) {
+				if (answer[i] == route[i]) continue;
+				else if (answer[i] < route[i]) return;
+				else answer = route;
+			}
+		}
+	}
+
+	for (unsigned int i = 0; i < unorderedMap[currentAirport].size(); i++) {
+		if (unorderedMap[currentAirport][i].second == false) {
+			unorderedMap[currentAirport][i].second = true;
+			route.push_back(unorderedMap[currentAirport][i].first);
+			
+			DFS(unorderedMap[currentAirport][i].first, unorderedMap, route);
+
+			route.pop_back();
+			unorderedMap[currentAirport][i].second = false;
+		}
+	}
+}
+
+int main() {
+	solution({ {"ICN","HND"}, {"HND", "ICN"}, {"ICN", "HND"}, {"HND", "ICN"} });
 }

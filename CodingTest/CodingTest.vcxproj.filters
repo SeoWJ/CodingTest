@@ -249,9 +249,6 @@
     <ClCompile Include="1051.cpp">
       <Filter>소스 파일\BaekJoon\S3</Filter>
     </ClCompile>
-    <ClCompile Include="43164.cpp">
-      <Filter>소스 파일\Programmers\DFS,BFS</Filter>
-    </ClCompile>
     <ClCompile Include="42840.cpp">
       <Filter>소스 파일\Programmers\BruteForce</Filter>
     </ClCompile>
@@ -509,6 +506,9 @@
     </ClCompile>
     <ClCompile Include="42860_%27조이스틱%27.cpp">
       <Filter>소스 파일\Programmers\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="43164_%27여행경로%27.cpp">
+      <Filter>소스 파일\Programmers\DFS,BFS</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
