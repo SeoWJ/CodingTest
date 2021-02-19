@@ -100,6 +100,9 @@
     <Filter Include="소스 파일\Programmers\동적계획법">
       <UniqueIdentifier>{9f4c9915-fea0-4b7a-ad57-db48c6b482c2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\LeetCode">
+      <UniqueIdentifier>{1394c933-f678-4a21-94be-12c60c303861}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1309.cpp">
@@ -509,6 +512,9 @@
     </ClCompile>
     <ClCompile Include="43164_%27여행경로%27.cpp">
       <Filter>소스 파일\Programmers\DFS,BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="10_%27Regular Expression Matching%27.cpp">
+      <Filter>소스 파일\LeetCode</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
