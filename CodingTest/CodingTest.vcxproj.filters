@@ -522,5 +522,11 @@
     <ClCompile Include="3_%27Longest Substring Without Repeating Characters%27.cpp">
       <Filter>소스 파일\LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="4_%27Median of Two Sorted Arrays%27.cpp">
+      <Filter>소스 파일\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="6_%27ZigZag Conversion%27.cpp">
+      <Filter>소스 파일\LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
