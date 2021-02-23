@@ -546,5 +546,11 @@
     <ClCompile Include="19_%27Remove Nth Node From End of List%27.cpp">
       <Filter>소스 파일\LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="22_%27Generate Parentheses%27.cpp">
+      <Filter>소스 파일\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="23_%27Merge k Sorted Lists%27.cpp">
+      <Filter>소스 파일\LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
