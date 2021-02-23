@@ -543,5 +543,8 @@
     <ClCompile Include="42628_%27이중우선순위큐%27.cpp">
       <Filter>소스 파일\Programmers\Heap</Filter>
     </ClCompile>
+    <ClCompile Include="19_%27Remove Nth Node From End of List%27.cpp">
+      <Filter>소스 파일\LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
