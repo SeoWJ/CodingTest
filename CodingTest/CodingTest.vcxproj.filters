@@ -552,5 +552,8 @@
     <ClCompile Include="23_%27Merge k Sorted Lists%27.cpp">
       <Filter>소스 파일\LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="14938_%27서강그라운드%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
