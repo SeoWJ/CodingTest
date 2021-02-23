@@ -555,5 +555,8 @@
     <ClCompile Include="14938_%27서강그라운드%27.cpp">
       <Filter>소스 파일\BaekJoon\G4</Filter>
     </ClCompile>
+    <ClCompile Include="9935_%27문자열 폭발%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
