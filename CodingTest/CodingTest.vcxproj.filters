@@ -570,5 +570,8 @@
     <ClCompile Include="1238_%27파티%27.cpp">
       <Filter>소스 파일\BaekJoon\G3</Filter>
     </ClCompile>
+    <ClCompile Include="2096_%27내려가기%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
