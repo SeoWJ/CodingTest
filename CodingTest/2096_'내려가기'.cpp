@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 
 	for (int i = 0; i < 3; i++) {
 		cin >> prevMax[i];
-		prevMin[i] = prevMax[i];
+		max[i] = min[i] = prevMin[i] = prevMax[i];
 	}
 
 	for (int i = 0; i < N - 1; i++) {
