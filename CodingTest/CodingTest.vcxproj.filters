@@ -103,6 +103,9 @@
     <Filter Include="소스 파일\LeetCode">
       <UniqueIdentifier>{1394c933-f678-4a21-94be-12c60c303861}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Kakao_Blind_2020">
+      <UniqueIdentifier>{5c263598-2fe7-41b6-b466-353b815c6086}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1309.cpp">
@@ -575,6 +578,9 @@
     </ClCompile>
     <ClCompile Include="17070_%27파이프 옮기기 1%27.cpp">
       <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
+    <ClCompile Include="%27문자열 압축%27.cpp">
+      <Filter>소스 파일\Kakao_Blind_2020</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
