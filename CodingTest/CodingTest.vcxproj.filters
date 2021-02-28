@@ -106,6 +106,9 @@
     <Filter Include="소스 파일\Kakao_Blind_2020">
       <UniqueIdentifier>{5c263598-2fe7-41b6-b466-353b815c6086}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Kakao_Blind_2019">
+      <UniqueIdentifier>{9372c220-562c-442a-804b-5d1c2187b48e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1309.cpp">
@@ -581,6 +584,9 @@
     </ClCompile>
     <ClCompile Include="%27문자열 압축%27.cpp">
       <Filter>소스 파일\Kakao_Blind_2020</Filter>
+    </ClCompile>
+    <ClCompile Include="%27오픈채팅방%27.cpp">
+      <Filter>소스 파일\Kakao_Blind_2019</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
