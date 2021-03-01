@@ -603,5 +603,8 @@
     <ClCompile Include="1차_%27캐시%27.cpp">
       <Filter>소스 파일\Kakao_Blind_2018</Filter>
     </ClCompile>
+    <ClCompile Include="1차_%27비밀지도%27.cpp">
+      <Filter>소스 파일\Kakao_Blind_2018</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
