@@ -594,5 +594,8 @@
     <ClCompile Include="1차_%27뉴스 클러스터링%27.cpp">
       <Filter>소스 파일\Kakao_Blind_2018</Filter>
     </ClCompile>
+    <ClCompile Include="1차_%27셔틀버스%27.cpp">
+      <Filter>소스 파일\Kakao_Blind_2018</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
