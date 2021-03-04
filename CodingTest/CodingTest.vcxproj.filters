@@ -246,9 +246,6 @@
     <ClCompile Include="42578.cpp">
       <Filter>소스 파일\Programmers\Hash</Filter>
     </ClCompile>
-    <ClCompile Include="42579.cpp">
-      <Filter>소스 파일\Programmers\Hash</Filter>
-    </ClCompile>
     <ClCompile Include="42862.cpp">
       <Filter>소스 파일\Programmers\Greedy</Filter>
     </ClCompile>
@@ -611,6 +608,9 @@
     </ClCompile>
     <ClCompile Include="1차_%27추석 트래픽%27.cpp">
       <Filter>소스 파일\Kakao_Blind_2018</Filter>
+    </ClCompile>
+    <ClCompile Include="42579_%27베스트앨범%27.cpp">
+      <Filter>소스 파일\Programmers\Hash</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
