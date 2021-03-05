@@ -615,5 +615,8 @@
     <ClCompile Include="1043_%27거짓말%27.cpp">
       <Filter>소스 파일\BaekJoon\G4</Filter>
     </ClCompile>
+    <ClCompile Include="12851_%27숨바꼭질 2%27.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
