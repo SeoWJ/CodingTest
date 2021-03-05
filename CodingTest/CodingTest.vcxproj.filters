@@ -612,5 +612,8 @@
     <ClCompile Include="42579_%27베스트앨범%27.cpp">
       <Filter>소스 파일\Programmers\Hash</Filter>
     </ClCompile>
+    <ClCompile Include="1043_%27거짓말%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
