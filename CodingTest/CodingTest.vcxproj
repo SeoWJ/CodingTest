@@ -232,10 +232,13 @@
     <ClCompile Include="15650_%27N과 M (2)%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="15652_%27N과 M (4)%27.cpp" />
     <ClCompile Include="15654_%27N과 M (5)%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="15686_%27치킨 배달%27.cpp" />
+    <ClCompile Include="15686_%27치킨 배달%27.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1620_%27나는야 포켓몬 마스터 이다솜%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
