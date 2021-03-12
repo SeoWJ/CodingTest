@@ -639,5 +639,8 @@
     <ClCompile Include="15663_%27N과 M (9)%27.cpp">
       <Filter>소스 파일\BaekJoon\S2</Filter>
     </ClCompile>
+    <ClCompile Include="9019_%27DSLR%27.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
