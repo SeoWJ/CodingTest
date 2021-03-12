@@ -4,101 +4,53 @@
 #include <stack>
 
 #define endl '\n'
+#define isAlphabet(a) ('A' <= a && a <= 'Z')
 
 using namespace std;
 
-struct Node {
-	char data;
-	Node* left_child = NULL;
-	Node* right_child = NULL;
-};
-
-string original;
-int idx = 0;
-
-Node* parsing(string formula);
-Node* parsing(Node* _operand1, string formula);
-void postorder(Node* n);
-
-int main(int argc, char* argv[]) {
+int main() {
 	ios::sync_with_stdio(false);
-	cin.tie(0);
+	cin.tie(NULL);
 
-	cin >> original;
+	string formula; cin >> formula;
 
-	Node* root = parsing(original);
-	while (idx != original.size())
-		root = parsing(root, original);
+	stack<char> S;
+	string result = "";
 
-	postorder(root);
-	cout << endl;
+	for (unsigned int i = 0; i < formula.size(); i++) {
+		if (isAlphabet(formula[i])) result += formula[i];
+		else {
+			if (formula[i] == '(') S.push(formula[i]);
+			else if (formula[i] == '*' || formula[i] == '/') {
+				while (!S.empty() && (S.top() == '*' || S.top() == '/')) {
+					result += S.top(); 
+					S.pop();
+				}
+				S.push(formula[i]);
+			}
+			else if (formula[i] == '+' || formula[i] == '-') {
+				while (!S.empty() && S.top() != '(') {
+					result += S.top();
+					S.pop();
+				}
+				S.push(formula[i]);
+			}
+			else { // formula[i] == ')'
+				while (!S.empty() && S.top() != '(') {
+					result += S.top();
+					S.pop();
+				}
+				S.pop();
+			}
+		}
+	}
+
+	while (!S.empty()) {
+		result += S.top(); 
+		S.pop();
+	}
+
+	cout << result << endl;
 
 	return 0;
-}
-
-Node* parsing(string formula) {
-	Node* operand1, * operand2, * symbol;
-
-	if (formula[idx] == '(') {
-		idx++;
-		operand1 = parsing(formula);
-	}
-	else {
-		operand1 = new Node;
-		operand1->data = formula[idx];
-		idx++;
-	}
-
-	symbol = new Node;
-	while (formula[idx] == ')') idx++;
-	if (formula[idx] == '\0') return operand1;
-	symbol->data = formula[idx];
-	symbol->left_child = operand1;
-	idx++;
-
-	if (formula[idx] == '(') {
-		idx++;
-		operand2 = parsing(formula);
-	}
-	else {
-		operand2 = new Node;
-		operand2->data = formula[idx];
-		idx++;
-	}
-	symbol->right_child = operand2;
-
-	return symbol;
-}
-
-Node* parsing(Node* _operand1, string formula) {
-	Node* operand1, * operand2, * symbol;
-
-	operand1 = _operand1;
-
-	symbol = new Node;
-	while (formula[idx] == ')') idx++;
-	if (formula[idx] == '\0') return operand1;
-	symbol->data = formula[idx];
-	symbol->left_child = operand1;
-	idx++;
-
-	if (formula[idx] == '(') {
-		idx++;
-		operand2 = parsing(formula);
-	}
-	else {
-		operand2 = new Node;
-		operand2->data = formula[idx];
-		idx++;
-	}
-	symbol->right_child = operand2;
-
-	return symbol;
-}
-
-void postorder(Node* n) {
-	if (n->left_child != NULL) postorder(n->left_child);
-	if (n->right_child != NULL) postorder(n->right_child);
-
-	cout << n->data;
 }
