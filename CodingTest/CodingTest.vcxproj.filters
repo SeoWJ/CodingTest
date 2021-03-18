@@ -112,6 +112,9 @@
     <Filter Include="소스 파일\Kakao_Blind_2018">
       <UniqueIdentifier>{e2402abd-513a-4b0d-b1af-388f19ce9a90}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\G2">
+      <UniqueIdentifier>{d7cc7e24-34ff-4a57-9521-652ee9ff6b5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1309.cpp">
@@ -641,6 +644,33 @@
     </ClCompile>
     <ClCompile Include="9019_%27DSLR%27.cpp">
       <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
+    <ClCompile Include="1992_%27쿼드트리%27.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
+    <ClCompile Include="2667_%27단지번호붙이기%27.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
+    <ClCompile Include="18119_%27단어 암기%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
+    <ClCompile Include="10830_%27행렬 제곱%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
+    <ClCompile Include="12100_%272048(easy)%27.cpp">
+      <Filter>소스 파일\BaekJoon\G2</Filter>
+    </ClCompile>
+    <ClCompile Include="14501_%27퇴사%27.cpp">
+      <Filter>소스 파일\BaekJoon\S4</Filter>
+    </ClCompile>
+    <ClCompile Include="3190_%27뱀%27.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
+    <ClCompile Include="14499_%27주사위 굴리기%27.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
+    <ClCompile Include="14891_%27톱니바퀴%27.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

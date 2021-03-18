@@ -38,7 +38,7 @@ int main() {
 		for (int x = 0; x < 22; x++) map[y][x] = WALL;
 	}
 
-	cin >> N >> M >> X >> Y >> K;
+	cin >> N >> M >> Y >> X >> K;
 	X++; Y++;
 
 	for (int y = 1; y <= N; y++) {
