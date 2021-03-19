@@ -672,5 +672,8 @@
     <ClCompile Include="14891_%27톱니바퀴%27.cpp">
       <Filter>소스 파일\BaekJoon\S1</Filter>
     </ClCompile>
+    <ClCompile Include="15683_%27감시%27.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
