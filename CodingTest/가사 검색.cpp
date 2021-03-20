@@ -17,11 +17,11 @@ vector<int> solution(vector<string> words, vector<string> queries) {
 	vector<int> answer;
 	tree = new Node;
 
-	for (unsigned int i = 0; i < queries.size(); i++)
+	for (unsigned int i = 0; i < words.size(); i++)
 		insert(words[i], tree);
 
-	for (unsigned int i = 0; i < words.size(); i++) {
-		int result = find(words[i], tree);
+	for (unsigned int i = 0; i < queries.size(); i++) {
+		int result = find(queries[i], tree);
 		answer.push_back(result);
 	}
 

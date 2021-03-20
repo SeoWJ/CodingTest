@@ -115,6 +115,9 @@
     <Filter Include="소스 파일\BaekJoon\G2">
       <UniqueIdentifier>{d7cc7e24-34ff-4a57-9521-652ee9ff6b5b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Line_2021_상반기">
+      <UniqueIdentifier>{0f06ff3b-2e22-4785-b10b-ba4d2326bf18}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1309.cpp">
@@ -674,6 +677,33 @@
     </ClCompile>
     <ClCompile Include="15683_%27감시%27.cpp">
       <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
+    <ClCompile Include="%27괄호 변환%27.cpp">
+      <Filter>소스 파일\Kakao_Blind_2020</Filter>
+    </ClCompile>
+    <ClCompile Include="가사 검색.cpp">
+      <Filter>소스 파일\Kakao_Blind_2020</Filter>
+    </ClCompile>
+    <ClCompile Include="Line_2021_1.cpp">
+      <Filter>소스 파일\Line_2021_상반기</Filter>
+    </ClCompile>
+    <ClCompile Include="Line_2021_2.cpp">
+      <Filter>소스 파일\Line_2021_상반기</Filter>
+    </ClCompile>
+    <ClCompile Include="Line_2021_3.cpp">
+      <Filter>소스 파일\Line_2021_상반기</Filter>
+    </ClCompile>
+    <ClCompile Include="Line_2021_4.cpp">
+      <Filter>소스 파일\Line_2021_상반기</Filter>
+    </ClCompile>
+    <ClCompile Include="Line_2021_5.cpp">
+      <Filter>소스 파일\Line_2021_상반기</Filter>
+    </ClCompile>
+    <ClCompile Include="Line_2021_6.cpp">
+      <Filter>소스 파일\Line_2021_상반기</Filter>
+    </ClCompile>
+    <ClCompile Include="Line_2021_7.cpp">
+      <Filter>소스 파일\Line_2021_상반기</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
