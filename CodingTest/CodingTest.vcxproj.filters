@@ -705,5 +705,8 @@
     <ClCompile Include="Line_2021_7.cpp">
       <Filter>소스 파일\Line_2021_상반기</Filter>
     </ClCompile>
+    <ClCompile Include="16234_%27인구 이동%27.cpp">
+      <Filter>소스 파일\BaekJoon\G5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
