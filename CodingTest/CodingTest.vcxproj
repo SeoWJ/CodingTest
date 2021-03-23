@@ -151,7 +151,10 @@
     <ClCompile Include="16234_%27인구 이동%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="20055_%27컨베이어 벨트 위의 로봇%27.cpp" />
+    <ClCompile Include="20055_%27컨베이어 벨트 위의 로봇%27.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="9205_%27맥주 마시면서 걸어가기%27.cpp" />
     <ClCompile Include="Line_2021_6.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

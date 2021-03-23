@@ -711,5 +711,8 @@
     <ClCompile Include="20055_%27컨베이어 벨트 위의 로봇%27.cpp">
       <Filter>소스 파일\BaekJoon\S1</Filter>
     </ClCompile>
+    <ClCompile Include="9205_%27맥주 마시면서 걸어가기%27.cpp">
+      <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
