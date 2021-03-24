@@ -118,6 +118,9 @@
     <Filter Include="소스 파일\Line_2021_상반기">
       <UniqueIdentifier>{0f06ff3b-2e22-4785-b10b-ba4d2326bf18}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\G1">
+      <UniqueIdentifier>{5ce37ec4-c7a2-406b-a9c0-023d8c443d10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1309.cpp">
@@ -713,6 +716,9 @@
     </ClCompile>
     <ClCompile Include="9205_%27맥주 마시면서 걸어가기%27.cpp">
       <Filter>소스 파일\BaekJoon\S1</Filter>
+    </ClCompile>
+    <ClCompile Include="1786_%27찾기%27.cpp">
+      <Filter>소스 파일\BaekJoon\G1</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
