@@ -720,5 +720,8 @@
     <ClCompile Include="1786_%27찾기%27.cpp">
       <Filter>소스 파일\BaekJoon\G1</Filter>
     </ClCompile>
+    <ClCompile Include="15684_%27사다리 조작%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
