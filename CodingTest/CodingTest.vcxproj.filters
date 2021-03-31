@@ -735,5 +735,8 @@
     <ClCompile Include="12849_%27본대 산책%27.cpp">
       <Filter>소스 파일\BaekJoon\S1</Filter>
     </ClCompile>
+    <ClCompile Include="16562_%27친구비%27.cpp">
+      <Filter>소스 파일\BaekJoon\G3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
