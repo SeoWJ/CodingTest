@@ -738,5 +738,8 @@
     <ClCompile Include="16562_%27친구비%27.cpp">
       <Filter>소스 파일\BaekJoon\G3</Filter>
     </ClCompile>
+    <ClCompile Include="1922_%27네트워크 연결%27.cpp">
+      <Filter>소스 파일\BaekJoon\G4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
