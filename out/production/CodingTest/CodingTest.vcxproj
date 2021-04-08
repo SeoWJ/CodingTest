@@ -148,7 +148,6 @@
     <ClCompile Include="%27오픈채팅방%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="11286_%27절대값 힙%27.cpp" />
     <ClCompile Include="12849_%27본대 산책%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -185,6 +184,7 @@
     <ClCompile Include="9205_%27맥주 마시면서 걸어가기%27.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="9466_%27텀 프로젝트%27.cpp" />
     <ClCompile Include="Line_2021_6.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
