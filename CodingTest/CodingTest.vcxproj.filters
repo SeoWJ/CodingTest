@@ -762,5 +762,8 @@
     <ClCompile Include="9375_%27패션왕 신해빈%27.cpp">
       <Filter>소스 파일\BaekJoon\S3</Filter>
     </ClCompile>
+    <ClCompile Include="25_%27Reverse Nodes in k-Group%27.cpp">
+      <Filter>소스 파일\LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
