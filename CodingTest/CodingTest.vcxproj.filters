@@ -777,5 +777,8 @@
     <ClCompile Include="12899_%27124 나라의 숫자%27.cpp">
       <Filter>소스 파일\Programmers\Level 2</Filter>
     </ClCompile>
+    <ClCompile Include="%27길 찾기 게임%27.cpp">
+      <Filter>소스 파일\Kakao_Blind_2019</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
